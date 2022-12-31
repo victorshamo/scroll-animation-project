@@ -10,6 +10,8 @@ body {
     align-items: center;
     justify-content: center;
     margin: 0;
+    /* to remove the x scroll bar */
+    overflow-x: hidden;
 }
 
 h1 {
@@ -31,6 +33,7 @@ h1 {
     transform: translateX(400%);
     /* when the class 'show' gets added */
     transition: transform 0.4s ease;
+
 }
 
 /* this way, the next one will always go/come from a different side */
