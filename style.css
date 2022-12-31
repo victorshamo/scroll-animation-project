@@ -12,3 +12,37 @@ body {
     margin: 0;
 }
 
+h1 {
+    margin: 10px;
+}
+
+.box {
+    background-color: steelblue;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 400px;
+    height: 200px;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.3);
+    /* all the way to the right */
+    transform: translateX(400%);
+    /* when the class 'show' gets added */
+    transition: transform 0.4s ease;
+}
+
+/* this way, the next one will always go/come from a different side */
+.box:nth-last-of-type(even) {
+    transform: translateX(-400%);
+}
+
+.box.show {
+    /* '0' is the default */
+    transform: translateX(0);
+}
+
+.box h2 {
+    font-size: 35px;
+}
